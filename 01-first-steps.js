@@ -69,13 +69,45 @@ function maxOfThree(x,y,z){
 /*Write a function that takes a character (i.e. a string of length 1) and returns true if it is a vowel, false otherwise.*/
 
 function isVowel(char){
-	var vowels="aeiou";
-	return (vowels.indexOf(char)>=0) ? false : true;
+	return ("aeiou".indexOf(char)==0)?true:false;
 }
 
-/*
+/*Hexadecimal*/
+/*Writes a function that convert a hexadecimal color, "blue" for example "#0000FF" in its RGB representation rgb(0,0,255)". Give the function the name getRGB() and test it with this code*/
 
+/*
+>>> var a = getRGB ('#00FF00');
+>>> a;
+“rgb(0,255,0)”;
 */
+
+function getHexValue(hex){
+	return parseInt(hex,16);
+}
+
+function getRGB(hex){
+	return "rgb(" + getHexValue(hex[1]+hex[2]) +"," 
+				  + getHexValue(hex[3]+hex[4]) +","
+				  + getHexValue(hex[5]+hex[6]) +") ";
+}
+
+/*Hexadecimal enhanced*/
+/*
+Improves the previous function so besides the conversion also identifies some basic colors:
+
+Black: #000000
+White: #FFFFFF
+Red: #FF0000
+Green: #00FF00
+Blue: #0000FF
+
+So the result can be (for these cases):
+
+>>> var a = getRGB ('#00FF00'); 
+>>> a;
+“rgb(0,255,0)   verde”;
+*/
+
 
 
 
